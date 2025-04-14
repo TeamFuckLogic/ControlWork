@@ -34,7 +34,7 @@ class JokeWindow(QMainWindow):
         user_text = self.input_field.text().strip().lower()
         if user_text:
             self.chat_display.append(f"<b>Ты:</b> {user_text}")
-            if any(word in user_text for word in ["анекдот", "шутка", "расскажи", "смешно"]):
+            if any(word in user_text for word in ["анекдот", "шутка", "расскажи", "смешно","да","давай рассказывай"]):
                 joke = random.choice(JOKES)
                 self.chat_display.append(f"<b>Бот:</b> {joke}")
             else:
